@@ -82,6 +82,8 @@ def prep_spatial_csv_files(county_name, state_name):
         points = points[(points['PARUSEDESC'] == 'RESIDENTIAL') | (points['PARUSEDESC'] == 'TOWNHOUSE')]
     elif county_name=="Bladen":
         points = points[(points['PARUSEDESC'] == 'RESIDENTIAL IMPROVED')]
+    else:
+        print("County {county_name} is not implemented yet. Fix the code by adding elif part for appropriate columns in parcel data.")
     # Print the number of rows after filtering
     num_rows_after = len(points)
     num_census_tracts_after = len(polygons)
