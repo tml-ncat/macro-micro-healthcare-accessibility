@@ -1,3 +1,7 @@
+# Citation
+If you use this work, please cite our paper:
+Link to paper: https://journals.sagepub.com/doi/abs/10.1177/03611981251380266
+
 # Instructions to run the code
 
 ## Prepare the Inputs
