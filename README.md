@@ -34,7 +34,4 @@ python src/travel_time_analysis.py --county_name Bladen --state_name NorthCaroli
 python src/plots.py --county_name guilford --file_name Option3_aggregated_information_181706locations_to_17hospitals__1720014810
 ```
 
-# Todo
 
-+ Add `requirements.txt` file. You will likely need `r5py`, `geopandas`, `contextily`, `shapely`, and related libraries. For now, just use `pip install <library name>` for the same.
-+ Move all parameters to one file so a user can adapt them for every run. This includes parameters such as (a) buffer zone around a census tract centroid for a hospital to considered a candidate hospital (currently set to 20 miles in `geopandas_analysis.py`) and (b) columns from SVI data to keep in the final output.
