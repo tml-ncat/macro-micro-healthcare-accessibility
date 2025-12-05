@@ -18,7 +18,7 @@ The analysis requires three main types of data:
 **CDC/ATSDR Social Vulnerability Index (SVI)**
 
 ### Download Location
-- **Official Website**: [https://www.atsdr.cdc.gov/placeandhealth/svi/data_documentation_download.html](https://www.atsdr.cdc.gov/placeandhealth/svi/data_documentation_download.html)
+- **Official Website**: [https://www.atsdr.cdc.gov/place-health/php/svi/svi-data-documentation-download.html?CDC_AAref_Val=https://www.atsdr.cdc.gov/placeandhealth/svi/data_documentation_download.html]
 - **Direct Download**: Select your state and year (recommend 2020 or latest)
 
 ### What to Download
