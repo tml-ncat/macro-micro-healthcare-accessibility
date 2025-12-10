@@ -452,10 +452,10 @@ accessibility/
 │   └── merge_detailed_with_explanations.py  [PROVIDED SCRIPT]
 │
 ├── src/
-│   ├── 1_prepare_spatial_data.py
-│   ├── 2_compute_travel_times.py
-│   ├── 3_aggregate_results.py
-│   └── 4_plot_histogram.py
+│   ├── 1_geopandas_analysis.py
+│   ├── 2_travel_times_analysis.py
+│   ├── 3_file_evaluator.py
+│   └── 4_plots_histogram.py
 │
 ├── requirements.txt
 ├── INSTALLATION.md
