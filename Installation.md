@@ -1,15 +1,12 @@
-# Installation Guide for Transportation Accessibility Analysis
+# Installation Guide for Healthcare Accessibility Analysis
 
 ## Quick Start
-
 To install all required packages, run:
-
 ```bash
 pip install -r requirements.txt
 ```
 
 ## System Dependencies
-
 Before installing Python packages, you may need to install system-level dependencies:
 
 ### Ubuntu/Debian:
@@ -31,7 +28,7 @@ brew install geos proj gdal spatialindex
 ### Windows:
 Consider using Conda/Anaconda for easier installation of geospatial packages:
 ```bash
-conda install -c conda-forge geopandas r5py contextily osmnx
+conda install -c conda-forge geopandas r5py contextily
 ```
 
 ## Installation Notes
@@ -66,7 +63,6 @@ conda install -c conda-forge geopandas r5py contextily osmnx
    - May need to set cache directory: `export CONTEXTILY_CACHE_DIR=/path/to/cache`
 
 ## Virtual Environment (Recommended)
-
 It's recommended to use a virtual environment:
 
 ```bash
@@ -83,30 +79,61 @@ pip install -r requirements.txt
 ```
 
 ## Verify Installation
-
 Test your installation with:
 
 ```python
 import geopandas
 import r5py
-import osmnx
+import shapely
 import contextily
+import pandas
+import numpy
+import matplotlib.pyplot as plt
+import chardet
+
 print("All packages imported successfully!")
 ```
 
 ## Package Descriptions
 
-- **geopandas**: Geospatial data handling and analysis
-- **r5py**: Routing engine for multimodal transport networks
-- **shapely**: Geometric operations
-- **pandas/numpy**: Data manipulation and numerical operations
-- **matplotlib**: Plotting and visualization
-- **folium**: Interactive web maps
-- **contextily**: Basemap tiles for static maps
-- **osmnx**: OpenStreetMap data retrieval and network analysis
-- **networkx**: Graph/network analysis
-- **chardet**: Character encoding detection
-- **pyproj**: Cartographic projections
-- **rtree**: Spatial indexing
-- **fiona**: Vector data I/O
-- **Pillow**: Image processing
+### Core Geospatial Libraries
+- **geopandas**: Geospatial data handling and analysis (used in spatial preprocessing)
+- **shapely**: Geometric operations (used for point and polygon manipulations)
+- **r5py**: Routing engine for calculating travel times (core analysis tool)
+  - GitHub: https://github.com/r5py/r5py
+  - DOI: https://doi.org/10.5281/zenodo.7060438
+  - Citation: Fink, C., W. Klumpenhouwer, M. Saraiva, R. Pereira, and H. Tenkanen. r5py: Rapid Realistic Routing with R5 in Python. Version 0.0.4, 2022.
+
+### Data Processing
+- **pandas**: Data manipulation and CSV handling
+- **numpy**: Numerical operations and statistics
+
+### Visualization
+- **matplotlib**: Plotting histograms and box plots for figures
+- **contextily**: Basemap tiles for choropleth maps
+
+### Utilities
+- **chardet**: Character encoding detection for CSV files
+
+### Dependencies (Automatically Installed)
+- **pyproj**: Cartographic projections (required by geopandas)
+- **rtree**: Spatial indexing (required by geopandas)
+- **fiona**: Vector data I/O (required by geopandas)
+- **Pillow**: Image processing (required by contextily)
+
+## Data Requirements
+
+In addition to Python packages, you'll need:
+
+1. **OpenStreetMap (OSM) network data** (`.osm.pbf` format)
+2. **Census tract shapefiles** with Social Vulnerability Index (SVI) data
+3. **Parcel data shapefiles** for your counties of interest
+4. **Hospital location data** (shapefile format)
+
+See `Data_sources.md` for details on obtaining these datasets.
+
+## Citation
+
+If you use this code, please cite our paper:
+
+Gulati, K., Pandey, V., Manikkavasagam, N., Reginato Junior, A., Lidbe, A., & Nagarajan, S. (2025). Comparative Analysis of Macro- and Micro-Level Measures of Healthcare Access in Urban and Rural Areas. *Transportation Research Record*. https://doi.org/10.1177/03611981251380266
