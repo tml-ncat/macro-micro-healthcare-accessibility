@@ -135,8 +135,4 @@ In addition to Python packages, you'll need:
 
 See `Data_sources.md` for details on obtaining these datasets.
 
-## Citation
 
-If you use this code, please cite our paper:
-
-Gulati, K., Pandey, V., Manikkavasagam, N., Reginato Junior, A., Lidbe, A., & Nagarajan, S. (2025). Comparative Analysis of Macro- and Micro-Level Measures of Healthcare Access in Urban and Rural Areas. *Transportation Research Record*. https://doi.org/10.1177/03611981251380266
