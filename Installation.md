@@ -103,6 +103,7 @@ print("All packages imported successfully!")
   - GitHub: https://github.com/r5py/r5py
   - DOI: https://doi.org/10.5281/zenodo.7060438
   - Citation: Fink, C., W. Klumpenhouwer, M. Saraiva, R. Pereira, and H. Tenkanen. r5py: Rapid Realistic Routing with R5 in Python. Version 0.0.4, 2022.
+- **rtree**: Spatial indexing for efficient spatial joins (required for geopandas.sjoin)
 
 ### Data Processing
 - **pandas**: Data manipulation and CSV handling
@@ -115,11 +116,13 @@ print("All packages imported successfully!")
 ### Utilities
 - **chardet**: Character encoding detection for CSV files
 
-### Dependencies (Automatically Installed)
-- **pyproj**: Cartographic projections (required by geopandas)
-- **rtree**: Spatial indexing (required by geopandas)
-- **fiona**: Vector data I/O (required by geopandas)
-- **Pillow**: Image processing (required by contextily)
+### Dependencies (Automatically Installed by pip)
+These packages are automatically installed when you install the packages above:
+- **pyproj**: Cartographic projections (installed with geopandas)
+- **fiona**: Vector data I/O (installed with geopandas)
+- **Pillow**: Image processing (installed with contextily)
+
+**Note:** While these are listed in requirements.txt for version pinning, pip will install them automatically as dependencies.
 
 ## Data Requirements
 
