@@ -39,18 +39,18 @@ import os
 
 # INPUT FILE 1: Path to your census tract shapefile
 # Replace this with the path to your .shp file
-# Example: '/Users/yourname/Documents/data/census_tracts.shp'
-SHAPEFILE_PATH = '/Users/komalgulati/Library/Mobile Documents/com~apple~CloudDocs/Documents/project_3_2/accessibility-main/macro-micro-healthcare-accessibility/tl_2025_37_tract.shp'
+# Example: 'data/census_tracts.shp' or 'state_data/census_tracts.shp'
+SHAPEFILE_PATH = 'state_data/tl_2025_37_tract.shp'
 
 # INPUT FILE 2: Path to your SVI CSV data file
 # Replace this with the path to your .csv file
-# Example: '/Users/yourname/Documents/data/svi_data.csv'
-CSV_PATH = '/Users/komalgulati/Library/Mobile Documents/com~apple~CloudDocs/Documents/project_3_2/accessibility-main/macro-micro-healthcare-accessibility/NorthCarolina.csv'
+# Example: 'data/svi_data.csv' or 'state_data/NorthCarolina.csv'
+CSV_PATH = 'state_data/NorthCarolina.csv'
 
 # OUTPUT DIRECTORY: Where to save the merged files
 # Replace this with your desired output folder
-# Example: '/Users/yourname/Documents/output/'
-OUTPUT_DIR = '/Users/komalgulati/Library/Mobile Documents/com~apple~CloudDocs/Documents/project_3_2/accessibility-main/macro-micro-healthcare-accessibility/state_data/'
+# Example: 'output/' or 'state_data/'
+OUTPUT_DIR = 'state_data/'
 
 # OUTPUT FILENAME (without extension): Base name for output files
 # The script will add .shp, .geojson, .gpkg extensions automatically
@@ -63,6 +63,7 @@ OUTPUT_FILENAME = 'SVI_NorthCarolina_SHP'
 # Usually these don't need to be changed, but you can customize if needed
 SHAPEFILE_ID_COLUMN = 'GEOID'  # Column name in shapefile (will auto-detect if None)
 CSV_ID_COLUMN = 'FIPS'         # Column name in CSV
+
 
 # ============================================================================
 # MAIN SCRIPT - NO NEED TO MODIFY BELOW THIS LINE
