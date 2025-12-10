@@ -1,6 +1,6 @@
 # Healthcare Accessibility Analysis: Macro vs. Micro-Level Measures
 
-This repository contains code for comparing macro-level and micro-level measures of healthcare accessibility in urban and rural areas. The methodology evaluates travel times to hospitals using three spatial resolutions to quantify how measurement granularity affects accessibility assessments.
+This repository contains code for comparing macro-level and micro-level measures of healthcare accessibility in rural and urban areas. The methodology evaluates travel times to hospitals using three spatial resolutions to quantify how measurement granularity affects accessibility assessments.
 
 ## 📄 Publication
 
@@ -13,6 +13,13 @@ This repository contains code for comparing macro-level and micro-level measures
 ![NC County Map](Images/NC_County_map.png)
 ## 🗺️ Study Counties
 
+### Rural Counties:
+- Bertie
+- Bladen
+- Columbus
+- Pender
+- Washington
+
 ### Urban Counties:
 - Buncombe (Asheville)
 - Durham
@@ -20,12 +27,6 @@ This repository contains code for comparing macro-level and micro-level measures
 - Mecklenburg (Charlotte)
 - Wake (Raleigh)
 
-### Rural Counties:
-- Bertie
-- Bladen
-- Columbus
-- Pender
-- Washington
 
 ## 📚 Documentation
 
