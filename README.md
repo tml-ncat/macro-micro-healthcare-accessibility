@@ -1,9 +1,3 @@
-# Citation
-
-If you use this code, please cite our paper:
-
-Gulati, K., Pandey, V., Manikkavasagam, N., Reginato Junior, A., Lidbe, A., & Nagarajan, S. (2025). Comparative Analysis of Macro- and Micro-Level Measures of Healthcare Access in Urban and Rural Areas. *Transportation Research Record*. https://doi.org/10.1177/03611981251380266
-
 # Instructions to run the code
 
 ## Prepare the Inputs
@@ -39,5 +33,9 @@ python src/travel_time_analysis.py --county_name Bladen --state_name NorthCaroli
 ```
 python src/plots.py --county_name guilford --file_name Option3_aggregated_information_181706locations_to_17hospitals__1720014810
 ```
+# Citation
 
+If you use this code, please cite our paper:
+
+Gulati, K., Pandey, V., Manikkavasagam, N., Reginato Junior, A., Lidbe, A., & Nagarajan, S. (2025). Comparative Analysis of Macro- and Micro-Level Measures of Healthcare Access in Urban and Rural Areas. *Transportation Research Record*. https://doi.org/10.1177/03611981251380266
 
