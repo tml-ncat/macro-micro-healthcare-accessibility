@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite our paper."
+title: "Healthcare Accessibility Analysis"
+authors:
+  - family-names: Gulati
+    given-names: Komal
+  - family-names: Pandey
+    given-names: Venktesh
+  - family-names: Manikkavasagam
+    given-names: Nithish
+  - family-names: "Reginato Junior"
+    given-names: Attilio
+  - family-names: Lidbe
+    given-names: Abhay
+  - family-names: Nagarajan
+    given-names: Sudhagar
+license: MIT
+repository-code: "https://github.com/tml-ncat/macro-micro-healthcare-accessibility"
+preferred-citation:
+  type: article
+  title: "Comparative Analysis of Macro- and Micro-Level Measures of Healthcare Access in Urban and Rural Areas"
+  authors:
+    - family-names: Gulati
+      given-names: Komal
+    - family-names: Pandey
+      given-names: Venktesh
+    - family-names: Manikkavasagam
+      given-names: Nithish
+    - family-names: "Reginato Junior"
+      given-names: Attilio
+    - family-names: Lidbe
+      given-names: Abhay
+    - family-names: Nagarajan
+      given-names: Sudhagar
+  journal: "Transportation Research Record"
+  year: 2025
+  start: 1
+  end: 16
+  doi: "10.1177/03611981251380266"
