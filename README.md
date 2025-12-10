@@ -30,6 +30,8 @@ This analysis compares three spatial resolution approaches:
 - **Option 2 (Intermediate):** Average coordinates of residential parcels per census tract
 - **Option 3 (Micro-level):** Individual residential parcel centroids as origin points
 
+![Methodological_framework](Images/Methodological_framework.png)
+
 Each option calculates travel times to hospitals, revealing how spatial aggregation affects accessibility measurements.
 
 ## 🔧 Usage Instructions
