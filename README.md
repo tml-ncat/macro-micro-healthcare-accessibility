@@ -10,7 +10,8 @@ This repository contains code for comparing macro-level and micro-level measures
 
 **Paper Link:** [https://journals.sagepub.com/doi/abs/10.1177/03611981251380266](https://journals.sagepub.com/doi/abs/10.1177/03611981251380266)
 
----
+---[FIGURE 2.pdf](https://github.com/user-attachments/files/24073701/FIGURE.2.pdf)
+
 
 ## 📚 Documentation
 
