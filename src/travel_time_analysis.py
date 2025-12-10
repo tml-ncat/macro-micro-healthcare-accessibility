@@ -40,10 +40,10 @@ def find_tt_matrix(county_name, state_name, option, osm_filename):
     elif option==3:
         #file_path = f"county_data/{county_name}/guilford_rev.csv"
         #file_path = f"county_data/{county_name}/guilford_low_ppscore.csv"
-        file_path = f"county_data/{county_name}/bladen.csv"
+        #file_path = f"county_data/{county_name}/bladen.csv"
         #id_col = 'TARGET_FID'
-        id_col = 'OBJECTID'
-    else:
+        #id_col = 'OBJECTID'
+    #else:
         file_path = f"county_data/{county_name}/Option3_residential_parcel_centroids.csv"
         id_col = 'new_index'
     df = pd.read_csv(file_path, encoding='utf-8')
