@@ -37,7 +37,7 @@ The SVI data preparation involves three steps:
 
 **File Placement (before merging):**
 ```
-state_data/
+your_working_directory/
 └── tl_2020_37_tract.shp  (and .shx, .dbf, .prj files)
 ```
 
@@ -59,7 +59,7 @@ state_data/
 
 **File Placement (before merging):**
 ```
-state_data/
+your_working_directory/
 └── NorthCarolina.csv
 ```
 
