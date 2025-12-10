@@ -150,13 +150,59 @@ def prep_spatial_csv_files(county_name, state_name):
     #     points = points.to_crs(polygons.crs)
     
     # Step 2: Add a unique index to the polygons
-    polygons['poly_idx'] = polygons.index + 1
+    #polygons['poly_idx'] = polygons.index + 1
     #==Exporting census tract centroid input files===
     # Calculate centroids and add lat/long columns
-    polygons['centroid'] = polygons.geometry.centroid
-    polygons['longitude'] = polygons.centroid.x
-    polygons['latitude'] = polygons.centroid.y
+    #polygons['centroid'] = polygons.geometry.centroid
+    #polygons['longitude'] = polygons.centroid.x
+    #polygons['latitude'] = polygons.centroid.y
     # polygons['geometry_wkt'] = polygons.geometry.to_wkt()
+    
+
+    # Export selected columns to CSV
+    #output_df = polygons[['OBJECTID','poly_idx','latitude', 'longitude','E_NOVEH','M_NOVEH', 'area', 'perimeter','pp_score_n','schwartz_n']].reset_index()
+    #output_df.to_csv(f'county_data/{county_name}/Option1_county_centroids.csv', index=False)
+    #print(f"CSV file Option 1 has been created with {len(output_df)} rows.")
+    #print(f"==File 1 export completed. Elapsed time {time.time()-start_time} sec since code start.")
+    # Step 2: Add a unique index to the polygons
+    polygons['poly_idx'] = polygons.index + 1
+    
+    #==Exporting census tract centroid input files===
+    # Project to equal-area CRS for accurate geometric calculations
+    print("Projecting to Albers Equal Area for accurate calculations...")
+    polygons_projected = polygons.to_crs(epsg=5070)  # Albers Equal Area for US
+    
+    # Calculate centroids in projected CRS
+    polygons_projected['centroid'] = polygons_projected.geometry.centroid
+    
+    # Convert centroids back to lat/long (WGS84)
+    centroids_latlong = polygons_projected['centroid'].to_crs(epsg=4326)
+    polygons['longitude'] = centroids_latlong.x
+    polygons['latitude'] = centroids_latlong.y
+    
+    # Calculate geometric properties in projected CRS (meters)
+    polygons['area'] = polygons_projected.geometry.area  # square meters
+    polygons['perimeter'] = polygons_projected.geometry.length  # meters
+    
+    # Calculate Polsby-Popper compactness score
+    # PP = (4π × Area) / (Perimeter²), Range: 0 to 1 (1 = perfect circle)
+    polygons['pp_score_n'] = (4 * np.pi * polygons['area']) / (polygons['perimeter'] ** 2)
+    
+    # Calculate Schwartzberg compactness score  
+    # Schwartzberg = Perimeter / (2π × √(Area/π)), Range: 1 to ∞ (1 = perfect circle)
+    polygons['schwartz_n'] = polygons['perimeter'] / (2 * np.pi * np.sqrt(polygons['area'] / np.pi))
+    
+    # Create OBJECTID - try multiple column names that might exist
+    if 'OBJECTID' in polygons.columns:
+        pass  # Already exists
+    elif 'GEOID' in polygons.columns:
+        polygons['OBJECTID'] = polygons['GEOID']
+    elif 'FIPS' in polygons.columns:
+        polygons['OBJECTID'] = polygons['FIPS']
+    else:
+        # Create sequential OBJECTID if none exists
+        polygons['OBJECTID'] = polygons['poly_idx']
+        print("Warning: OBJECTID not found, using poly_idx")
 
     # Export selected columns to CSV
     output_df = polygons[['OBJECTID','poly_idx','latitude', 'longitude','E_NOVEH','M_NOVEH', 'area', 'perimeter','pp_score_n','schwartz_n']].reset_index()
@@ -166,6 +212,8 @@ def prep_spatial_csv_files(county_name, state_name):
 
     points['p_latitude'] = points.geometry.y
     points['p_longitude'] = points.geometry.x
+    #points['p_latitude'] = points.geometry.y
+    #points['p_longitude'] = points.geometry.x
     # sys.exit(1)
     # Print the first few rows of the loaded shapefiles
     # print("Polygons GeoDataFrame:")
@@ -279,7 +327,7 @@ def export_hospital_csv(avg_lat, avg_lon, county_name, state_name):
     # Inspect the first few rows to check the structure
     print(points_gdf.head())
     # Specify the county name you are interested in
-    county_name = 'Columbus'  # Replace with the actual county name
+    county_name = 'Bladen'  # Replace with the actual county name
 
 # Filter the data to include only hospitals in the specified county
 # Assuming the shapefile has a column named 'county' or similar
@@ -297,7 +345,7 @@ def export_hospital_csv(avg_lat, avg_lon, county_name, state_name):
         print("Number of physicians in each hospital in the specified county:")
         print(hospitals_physicians)
         # Save the results to a CSV file
-        output_csv_path = './county_data/Columbus/Columbus_hospitals_physicians_count.csv'  # Replace with desired output path
+        output_csv_path = './county_data/Bladen/Bladen_hospitals_physicians_count.csv'  # Replace with desired output path
         hospitals_physicians.to_csv(output_csv_path, index=False)
         print(f"Results saved to {output_csv_path}")
     else:
