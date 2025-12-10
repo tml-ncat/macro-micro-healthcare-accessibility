@@ -11,7 +11,21 @@ This repository contains code for comparing macro-level and micro-level measures
 **Paper Link:** [https://journals.sagepub.com/doi/abs/10.1177/03611981251380266](https://journals.sagepub.com/doi/abs/10.1177/03611981251380266)
 
 ![NC County Map](Images/NC_County_map.png)
+## 🗺️ Study Counties
 
+### Urban Counties:
+- Buncombe (Asheville)
+- Durham
+- Guilford (Greensboro)
+- Mecklenburg (Charlotte)
+- Wake (Raleigh)
+
+### Rural Counties:
+- Bertie
+- Bladen
+- Columbus
+- Pender
+- Washington
 
 ## 📚 Documentation
 
@@ -127,21 +141,7 @@ The analysis will show:
 
 ![Travel_time_comparison](Images/Travel_time_comparison.png)
 
-## 🗺️ Study Counties
 
-### Urban Counties:
-- Buncombe (Asheville)
-- Durham
-- Guilford (Greensboro)
-- Mecklenburg (Charlotte)
-- Wake (Raleigh)
-
-### Rural Counties:
-- Bertie
-- Bladen
-- Columbus
-- Pender
-- Washington
 
 ## 🛠️ Troubleshooting
 
