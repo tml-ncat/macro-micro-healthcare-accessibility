@@ -80,7 +80,7 @@ CSV_PATH = '/path/to/state_data/NorthCarolina.csv'
 OUTPUT_DIR = '/path/to/state_data/'
 
 # OUTPUT FILENAME: What to name the output
-OUTPUT_FILENAME = 'SVI_NorthCarolina_SHP'
+OUTPUT_FILENAME = 'SVI_NC_SHP'
 ```
 
 **Run the merge:**
@@ -98,9 +98,9 @@ python merge_detailed_with_explanations.py
 **Output Files Created:**
 ```
 state_data/
-├── SVI_NorthCarolina_SHP.shp  (+ .shx, .dbf, .prj files)
-├── SVI_NorthCarolina_SHP.geojson
-└── SVI_NorthCarolina_SHP.gpkg
+├── SVI_NC_SHP.shp  (+ .shx, .dbf, .prj files)
+├── SVI_NC_SHP.geojson
+└── SVI_NC_SHP.gpkg
 ```
 
 All three formats contain:
