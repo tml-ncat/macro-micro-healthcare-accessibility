@@ -85,7 +85,7 @@ OUTPUT_FILENAME = 'SVI_NC_SHP'
 
 **Run the merge:**
 ```bash
-python merge_detailed_with_explanations.py
+python state_data/svi_tract_merge.py
 ```
 
 **What the script does:**
