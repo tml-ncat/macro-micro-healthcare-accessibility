@@ -125,6 +125,9 @@ The analysis will show:
 - **Rural counties:** Significant discrepancies of 10-15 minutes in non-compact census tracts
 - **Worst-case scenarios:** Higher travel times for households without vehicles (vulnerable populations)
 
+![Travel_time_comparison](Images/Comparison of minimum travel time estimates obtained from Options 1, 2, and 3 for the selected rural (left) versus urban
+(right) counties in North Carolina (NC).png)
+
 ## 🗺️ Study Counties
 
 ### Urban Counties:
