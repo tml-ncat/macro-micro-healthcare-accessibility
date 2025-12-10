@@ -1,6 +1,8 @@
 # Citation
-If you use this work, please cite our paper:
-Link to paper: https://journals.sagepub.com/doi/abs/10.1177/03611981251380266
+
+If you use this code, please cite our paper:
+
+Gulati, K., Pandey, V., Manikkavasagam, N., Reginato Junior, A., Lidbe, A., & Nagarajan, S. (2025). Comparative Analysis of Macro- and Micro-Level Measures of Healthcare Access in Urban and Rural Areas. *Transportation Research Record*. https://doi.org/10.1177/03611981251380266
 
 # Instructions to run the code
 
